@@ -7,6 +7,8 @@ const gameOver = document.querySelector('.game-over')
 audioStart = new Audio('./assets/audio/audio_theme.mp3')
 audioGameOver = new Audio('./assets/audio/audio_gameover.mp3')
 audioJump = new Audio('./assets/audio/jump.mp3')
+const menuplay = document.querySelector('#fundo_menu')
+menuplay.play()
 
 const startGame = () => {
   pipe.classList.add('pipe-animation')
@@ -14,6 +16,7 @@ const startGame = () => {
   logo.style.display = 'none'
   // audio
   audioStart.play()
+  menuplay.pause()
 }
 
 const restartGame = () => {
